@@ -1,0 +1,253 @@
+
+50. Write a JAVAprogram to print all negative elements in an array.
+
+import java.util.*;
+
+public class Main {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number of elements in the array:");
+    int size = sc.nextInt();
+
+    int[] intArray = new int[size];
+    System.out.println("Enter the elements of the array:");
+
+    for (int i = 0; i < size; i++) {
+      intArray[i] = sc.nextInt();
+    }
+
+
+    for (int i = 0; i < intArray.length; i++) {
+      if (intArray[i] < 0) {
+        
+    System.out.println("Total number of negative elements: " + intArray[i]);
+      }
+    }
+
+  }
+}
+-------------------------------------------------------------------------------
+51. Write a JAVAprogram to find second largest element in an array.
+
+import java.util.*;
+public class Main{
+public static void main(String args[]){
+Scanner sc =new Scanner(System.in);
+int n,temp;
+System.out.println("enter the size of the array");
+n=sc.nextInt();
+int a[]=new int[n];
+System.out.println("enter all elements");
+for(int i=0;i<n;i++)
+{
+a[i]=sc.nextInt();
+}
+for(int i=0;i<n;i++)
+{
+for(int j=i+1;j<n;j++)
+{
+if(a[i]>a[j])
+{
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}}}
+System.out.println("second larg"+a[n-2]);
+
+}}
+-------------------------------------------------------------------------
+52. Write a JAVAprogram to find maximum and minimum element in an array. 
+import java.util.*;
+public class Main
+{
+ 
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        
+        System.out.print("Enter the size of the array ");
+        int size = sc.nextInt();
+        
+        int[] array = new int[size];
+        
+        System.out.println("Enter the elements of the array");
+        for (int i = 0; i < size; i++) {
+            array[i] = sc.nextInt();
+        }
+        int min = array[0];
+        int max = array[0];
+        
+        for (int i = 1; i < size; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        
+       System.out.println("Minimum element " + min);
+       System.out.println("Maximum element " + max);
+    }
+}
+----------------------------------------------------------------------------
+53. Write a JAVAprogram to count total number of even and odd elements in an array.
+import java.util.*;
+
+public class Main {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number of elements in the array:");
+    int size = sc.nextInt();
+
+    int[] intArray = new int[size];
+    System.out.println("Enter the elements of the array:");
+
+    for (int i = 0; i < size; i++) {
+      intArray[i] = sc.nextInt();
+    }
+
+    int evenCount = 0;
+    int oddCount = 0;
+
+    for (int i = 0; i < intArray.length; i++) {
+      if (intArray[i] % 2 == 0) {
+        evenCount++;
+      } else {
+        oddCount++;
+      }
+    }
+    System.out.println("Total number of even elements: " + evenCount);
+    System.out.println("Total number of odd elements: " + oddCount);
+  }
+}
+----------------------------------------------------------------------------
+54. Write a JAVAprogram to count total number of negative elements in an array.
+import java.util.*;
+
+public class Main {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number of elements in the array:");
+    int size = sc.nextInt();
+
+    int[] intArray = new int[size];
+    System.out.println("Enter the elements of the array:");
+
+    for (int i = 0; i < size; i++) {
+      intArray[i] = sc.nextInt();
+    }
+
+    int negativeCount = 0;
+
+    for (int i = 0; i < intArray.length; i++) {
+      if (intArray[i] < 0) {
+        negativeCount++;
+      }
+    }
+
+    System.out.println("Total number of negative elements: " + negativeCount);
+  }
+}
+------------------------------------------------------------
+55. Write a JAVAprogram to copy all elements from an array to another array.
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the element size");
+	int size=sc.nextInt();
+	int arr[]=new int[size];
+	System.out.println("enter the array ele");
+	for(int i=0;i<size;i++){
+	    arr[i]=sc.nextInt();
+	}
+	int brr[]=new int[size];
+	for(int i=0;i<size;i++){
+	    brr[i]=arr[i];
+	}
+	    	for(int i=0;i<size;i++){
+	    	System.out.println("the array ele are"+brr[i]);	
+	}
+	}}
+-------------------------------------------
+
+56. Write a JAVAprogram to delete an element from an array at specified position.
+import java.util.*;
+
+public class Main {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number of elements in the array:");
+    int size = sc.nextInt();
+
+    int[] arr = new int[size];
+    System.out.println("Enter the elements of the array:");
+
+    for (int i = 0; i < size; i++) {
+      arr[i] = sc.nextInt();
+    }
+     System.out.println("Enter array location:");
+     int loc=sc.nextInt();
+       for (int i = loc; i < size-1; i++) {
+            arr[i]=arr[i+1];}
+            size--;
+             for (int i = 0; i < size; i++) {
+             System.out.println("elements are:"+arr[i]);   
+            }}}
+
+----------------------------------------------------------------------
+58. Write a JAVAprogram to print all unique elements in the array.
+import java.util.*;
+
+public class Main {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number of elements in the array:");
+    int size = sc.nextInt();
+
+    int[] arr = new int[size];
+    System.out.println("Enter the elements of the array:");
+
+    for (int i = 0; i < size; i++) {
+      arr[i] = sc.nextInt();
+    }
+       for (int i = 0; i < arr.length-1; i++) {
+            if(arr[i]!=arr[i+1]){
+             System.out.println("elements are:"+arr[i]);   
+            }}
+              System.out.println(arr[arr.length-1]);  }}
+-------------------------------------------------------------------
+59. Write a JAVAprogram to count total number of duplicate elements in an array.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size:");
+        int n = sc.nextInt();
+        int a[] = new int[n];
+
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        int count = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (a[i] == a[j]) {
+                    count++;
+                    break;
+                }
+            }
+        }
+
+        System.out.println("Number of duplicates: " + count);
+    }
+}
+-------------------------------------------------------------------------
+
+
+
